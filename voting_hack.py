@@ -22,6 +22,8 @@ def start():
     if len(sys.argv) < 2:
         print(f"\n( `ε´ ) you need to provide the menti page, ex: https://www.menti.com/uyupv3tww7")
         sys.exit(1)
+    else:
+        sys.argv[1] = str(sys.argv[1]).replace('https', 'http')
     if len(sys.argv) < 3:
         print('Промежуток времени выбран', 2, 'мин.')
         minutes = 2
