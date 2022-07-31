@@ -162,7 +162,7 @@ def main(choice, TARGET, loop, value, QUESTIONS, PRESENTER_ID, PRESENTER_QUESTIO
     if QUESTIONS[PRESENTER_ID]['type'] == "qfa":
         vote = requests.post(f"https://www.menti.com/core/qfa/{choice}/upvote", headers=headers, json={})
     else:
-        vote = requests.post(f"https://www.menti.com/core/votes/{PRESENTER_ID}", headers=headers, json=DATA)
+        vote = requests.post(f"https://www.menti.com/core/votes/{40020414}", headers=headers, json=DATA)
     if vote.status_code not in [201, 200]:
         print(f"{vote.status_code} HAHAHAHAHA LOOKS LIKE ERROR, LOOKS WHAT YOU DID ┐('～`;)┌")
         print(vote.text)
